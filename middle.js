@@ -1,6 +1,15 @@
 // TEST/ASSERTION FUNCTIONS
 const eqArrays = function(arrayOne, arrayTwo) {
   let output = "";
+  
+  if (arrayOne.length === 0 && arrayTwo.length === 0) {
+    return true;
+  }
+
+  if (arrayOne.length === 0 || arrayTwo.length === 0) {
+    return false;
+  }
+
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] === arrayTwo[i]) {
       output = true; // Assign a truthy value to output if matched
@@ -17,7 +26,6 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
   }
-
 };
 
 // Pseudocode:
@@ -31,18 +39,23 @@ const middle = function(array) {
   let resultArray = [];
   let midIndex = Math.ceil(array.length / 2 - 1);
 
-  if (array.length > 2 && array.length % 2 === 0) { // Check if array has an even number of elements
+  if (array.length <= 2) {
+    return resultArray;
+  }
+
+  if (array.length % 2 === 0) { // Check if array has an even number of elements
     resultArray.push(array[midIndex], array[midIndex + 1]);
-  } else if (array.length > 2 && array.length % 2 !== 0) { // Check if array has an odd number of elements
+  } else if (array.length % 2 !== 0) { // Check if array has an odd number of elements
     resultArray.push(array[midIndex]);
   }
   return resultArray;
 };
 
 // TEST CODE
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+assertArraysEqual(middle([1]), []); // => should PASS // Go back and revise the code for assertArraysEqual
+assertArraysEqual(middle([1, 2]), []);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4, 5]); // => should FAIL
