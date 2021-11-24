@@ -19,20 +19,33 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 };
 
 const without = function(source, itemsToRemove) {
-  let resultArray = [];
-  for (let i = 0; i < source.length; i++) {
-    if (source[i] !== itemsToRemove[i]) {
-        resultArray.push(source[i]);
+  // let resultArray = [];
+
+  // for (let i = 0; i < source.length; i++) {
+  //   if (source[i] !== itemsToRemove[i] && !resultArray.includes(source[i])) {
+  //     resultArray.push(source[i]);
+  //   } else if (source[i] === itemsToRemove[i]) {
+  //     resultArray.splice(i);
+  //   }
+  // }
+
+  let output = source;
+
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    if (output.includes(itemsToRemove[i])) {
+      let index = output.indexOf(itemsToRemove[i]); // Assign index to the position of the value in the output array
+      output.splice(index, 1); // Remove 1 element from index
     }
-  };
-  return resultArray;
+  }
+  return output;
 };
 
-// TEST CODE: 
+// TEST CODE:
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
-console.log(without(["1", "2", "3"], ["1", 2, "3"])) // => ["2"]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], ["1", "2", 3])); // => ["3"]
+console.log(without(["1", "2", "3"], ["3"])); // => ["1", "2"]
+console.log(without([4, 5, 6], [1, 2, 4])); // => [5, 6]
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
