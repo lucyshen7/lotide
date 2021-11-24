@@ -24,7 +24,7 @@ const without = function(source, itemsToRemove) {
   for (let i = 0; i < itemsToRemove.length; i++) {
     if (output.includes(itemsToRemove[i])) {
       let index = output.indexOf(itemsToRemove[i]); // Assign index to the position of the value in the output array
-      output.splice(index, 1); // Remove 1 element from index
+      output.splice(index, 1); // Remove 1 element at index from the output array
     }
   }
   return output;
