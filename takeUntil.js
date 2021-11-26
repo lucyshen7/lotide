@@ -1,5 +1,4 @@
-// assertArraysEqual copied over
-// eqArrays
+// assertArraysEqual copied over (eqArrays and assertArraysEqual)
 
 const eqArrays = function(arrayOne, arrayTwo) {
   let output = "";
@@ -22,7 +21,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return output;
 };
 
-// assertArraysEqual
 
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   if (eqArrays(arrayOne, arrayTwo)) {
