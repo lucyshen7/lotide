@@ -24,6 +24,8 @@ const findKey = function(object, callBack) {
   return result;
 };
 
+module.exports = findKey;
+
 // TEST CODE
 
 assertEqual(findKey({

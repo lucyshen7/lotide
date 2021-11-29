@@ -4,7 +4,6 @@
 // - For odd number of elements, an array containing a single middle element should be returned
 // - For even number of elements, an array containing two elements in the middle should be returned
 
-// Middle function
 const middle = function(array) {
   let resultArray = [];
   let midIndex = Math.ceil(array.length / 2 - 1);

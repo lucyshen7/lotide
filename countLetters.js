@@ -24,6 +24,8 @@ const countLetters = function(string) {
   return obj;
 }
 
+module.exports = countLetters;
+
 // TEST CODE
 let obj1 = {};
 obj1 = (countLetters("lighthouse in the house"));
