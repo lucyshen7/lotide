@@ -39,10 +39,6 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
-const dogNames = ["max", "lulu", "ginger"];
-const usernames = ["lola", "aidan", "penelope"];
-
 const map = function(array, callback) {
   let results = [];
   for (let item of array) {
@@ -50,6 +46,13 @@ const map = function(array, callback) {
   }
   return results;
 }
+
+
+// TEST CODE
+
+const words = ["ground", "control", "to", "major", "tom"];
+const dogNames = ["max", "lulu", "ginger"];
+const usernames = ["lola", "aidan", "penelope"];
 
 const results1 = map(words, word => word[0]); // Callback function in this case takes the value of the first index (letter) of each element (word) in the array
 const sayHiToDog = map(dogNames, dogName => `Hi ${dogName}`);

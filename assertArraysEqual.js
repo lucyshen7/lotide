@@ -6,6 +6,15 @@ Pseudocode:
 
 const eqArrays = function(arrayOne, arrayTwo) {
   let output = "";
+  
+  if (arrayOne.length === 0 && arrayTwo.length === 0) {
+    return true;
+  }
+
+  if (arrayOne.length === 0 || arrayTwo.length === 0) {
+    return false;
+  }
+
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] === arrayTwo[i]) {
       output = true; // Assign a truthy value to output if matched
