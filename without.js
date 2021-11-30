@@ -1,26 +1,8 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  let output = "";
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] === arrayTwo[i]) {
-      output = true; // Assign a truthy value to output if matched
-    } else {
-      output = false; // Assign a falsey value to output if not matched
-    }
-  }
-  return output;
-};
-
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
-  }
-};
+// const eqArrays = require('./eqArrays');
+// const assertArraysEqual = require('./assertArraysEqual'); // use deepEqual
 
 const without = function(source, itemsToRemove) {
   let output = source;
-
   for (let i = 0; i < itemsToRemove.length; i++) {
     if (output.includes(itemsToRemove[i])) {
       let index = output.indexOf(itemsToRemove[i]); // Assign index to the position of the value in the output array

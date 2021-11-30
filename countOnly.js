@@ -20,11 +20,8 @@
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
-
-  for (const item of allItems) { // Check each element of the array
-    // console.log("item is:", item)
-    if (itemsToCount[item]) { // If key exists inside the array (truthy value),
-      // console.log("it exists inside the object. obj key is: ", item, "obj value is:", itemsToCount[item])
+  for (const item of allItems) { // Check each element of the array // console.log("item is:", item)
+    if (itemsToCount[item]) { // If key exists inside the array (truthy value), // console.log("it exists inside the object. obj key is: ", item, "obj value is:", itemsToCount[item])
       if (results[item]) { // Check if the results object has the item (name)
         results[item] += 1;
       } else {

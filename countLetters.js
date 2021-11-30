@@ -1,19 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = require('./assertEqual'); // use strictEqual
 
 // countLetters
 
 const countLetters = function(string) {
   let obj = {};
-
-  let str = string.split(" ").join(""); // Remove spaces in string
-  // console.log(str)
-
+  let str = string.split(" ").join(""); // Remove spaces in string // console.log(str)
   for (const letter of str) { // Loop through each letter of str
     if (obj[letter]) { // If the key exists in the obj, increment value by 1
       obj[letter] += 1;

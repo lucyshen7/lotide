@@ -1,27 +1,10 @@
 // assertArraysEqual function
 
-const eqArrays = function(arrayOne, arrayTwo) {
-  let output = "";
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] === arrayTwo[i]) {
-      output = true; // Assign a truthy value to output if matched
-    } else {
-      output = false; // Assign a falsey value to output if not matched
-    }
-  }
-  return output;
-};
+// const eqArrays = require('./eqArrays'); // use deepEqual
 
 // Implement assertArraysEqual for asserting that two arrays are equal
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
-  }
-
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 // Implement a function called letterPositions
 

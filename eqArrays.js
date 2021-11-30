@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual'); use assert.strictEqual
 
 /* Pseudocode
 - Compare each element in two arrays for a perfect match.
