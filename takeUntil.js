@@ -34,7 +34,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 // Implement takeUntil
 
 // The function will take 2 parameters:
-// 1. The aray to work with
+// 1. The array to work with
 // 2. The callback ("predicate")
 
 const takeUntil = function(array, callBack) {
