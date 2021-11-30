@@ -1,8 +1,4 @@
-// const assertEqual = require('./assertEqual'); use assert.strictEqual
-
-/* Pseudocode
-- Compare each element in two arrays for a perfect match.
-*/
+// Pseudocode: Compare each element in two arrays for a perfect match.
 
 const eqArrays = function(arrayOne, arrayTwo) {
   let output = "";

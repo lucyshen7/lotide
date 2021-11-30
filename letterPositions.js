@@ -1,13 +1,3 @@
-// assertArraysEqual function
-
-// const eqArrays = require('./eqArrays'); // use deepEqual
-
-// Implement assertArraysEqual for asserting that two arrays are equal
-
-const assertArraysEqual = require('./assertArraysEqual');
-
-// Implement a function called letterPositions
-
 const letterPositions = function(sentence) {
   const results = {};
   let str = sentence; // console.log(str);
@@ -24,8 +14,3 @@ const letterPositions = function(sentence) {
 };
 
 module.exports = letterPositions;
-
-// TEST CODE
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("lighthouse in the house").u, [7, 20]);
-assertArraysEqual(letterPositions("lighthouse in the house").e, [9, 16, 22]);

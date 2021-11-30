@@ -1,9 +1,3 @@
-// assertEqual
-
-// const assertEqual = require('./assertEqual');
-
-// Implement findKeyByValue
-
 // Pseudocode:
 // - Take in an object and a value
 // - Scan the object and return first key with the given value
@@ -18,19 +12,3 @@ const findKeyByValue = function(object, value) {
 };
 
 module.exports = findKeyByValue;
-
-// TEST CODE
-
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire",
-  crime: "Brooklyn Nine-Nine",
-  romance: "The Notebook"
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Notebook"), "romance");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Squid Game"), undefined);
