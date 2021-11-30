@@ -31,8 +31,8 @@ The following functions are currently implemented:
 * `middle`: Returns the middle element of an array (single element for odd number of elements, two elements for even number of elements)
 * `countLetters`: Returns an object counting the number of times a letter appears in a string
 * `countOnly`: Given an array of strings and an object specifying what to count, returns a count of how many instances of each string were found in the array 
-* `findKey`: Given an object and a callback, scan the object and return the first key for which the callback returns a truthy value
-* `findKeyByValue`: Given an object and a value, scan the object and return first key with the given value
+* `findKey`: Given an object and a callback, scans the object and returns the first key for which the callback returns a truthy value
+* `findKeyByValue`: Given an object and a value, scans the object and returns first key with the given value
 * `flatten`: Given an array with other arrays inside, it can flatten it into a single-level array 
 * `letterPositions`: Returns an object with all the letters that appear in a string, with each letter's index 
 * `map`: Given an array and a callback function, performs the function on all elements in the array and returns a new array
