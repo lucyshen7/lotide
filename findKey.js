@@ -1,7 +1,3 @@
-// copied over assertEqual
-
-// const assertEqual = require('./assertEqual'); // Refactor
-
 // Implement findKey
 // - Takes in an object and a callback
 // - Scans object and returns the first key for which the callback returns a truthy value
@@ -19,32 +15,3 @@ const findKey = function(object, callBack) {
 };
 
 module.exports = findKey;
-
-// TEST CODE
-
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), "noma");
-
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 3), "Akaleri");
-
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 5), undefined);
