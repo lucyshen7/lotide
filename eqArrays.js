@@ -1,19 +1,24 @@
-// Pseudocode: Compare each element in two arrays for a perfect match.
-
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (arrayOne.length === 0 && arrayTwo.length === 0) {
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length === 0 && arr2.length === 0) {
     return true;
   }
-  if (arrayOne.length === arrayTwo.length ) {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        return false; // Return a false if not matched
-      }
-    }
-    return true; // Else, return true
-  } else {
+
+  if (arr1.length !== arr2.length) {
     return false;
   }
+
+  for (let i = 0; i < arr1.length; i++) {
+    const item1 = arr1[i];
+    const item2 = arr2[i];
+    if (Array.isArray(item1) && Array.isArray(item2)) { // if both are arrays
+      if (!eqArrays(item1, item2)) {
+        return false;
+      }
+    } else if (item1 !== item2) {
+      return false;
+    }
+  }
+  return true;
 };
 
 module.exports = eqArrays;
