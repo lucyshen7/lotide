@@ -19,10 +19,10 @@ const assertObjectsEqual = function(object1, object2) {
 };
 
 // TEST CODE
-const ab = { a: "1", b: 2 };
-const ba = { b: 2, a: "1" };
+// const ab = { a: "1", b: 2 };
+// const ba = { b: 2, a: "1" };
 
-assertObjectsEqual(ab, ba);
+// assertObjectsEqual(ab, ba);
 
-assertObjectsEqual({Chance: 2, Cody: 1}, {Chance: 2, Cody: 1}); // => should PASS
-assertObjectsEqual({Chance: 2, Cody: 1}, {Chance: 2, Cody: 1, Sammie: 3}); // => should FAIL
+// assertObjectsEqual({Chance: 2, Cody: 1}, {Chance: 2, Cody: 1}); // => should PASS
+// assertObjectsEqual({Chance: 2, Cody: 1}, {Chance: 2, Cody: 1, Sammie: 3}); // => should FAIL

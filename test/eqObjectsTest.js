@@ -18,19 +18,40 @@ describe("#eqObjects", () => {
     assert.strictEqual(eqObjects(cd, cd2), false);
   });
 
+  // Recursive eqObjects
+
+  it("returns true for obj1 & obj2", () => {
+    assert.strictEqual(eqObjects(obj1, obj2), true);
+  });
+
+  it("returns false for obj3 & obj4", () => {
+    assert.strictEqual(eqObjects(obj3, obj4), false);
+  });
+
+  it("returns false for obj5 & obj6", () => {
+    assert.strictEqual(eqObjects(obj5, obj6), false);
+  });
+
 });
 
 // TEST CODE
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-// assertEqual(eqObjects(ab, ba), true);
 
 const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false);
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false);
+
+// Recursive eqObjects
+
+const obj1 = { a: { z: 1 }, b: 2 };
+const obj2 = { a: { z: 1 }, b: 2 };
+
+const obj3 = { a: { y: 0, z: 1 }, b: 2 };
+const obj4 = { a: { z: 1 }, b: 2 };
+
+const obj5 = { a: { y: 0, z: 1 }, b: 2 };
+const obj6 = { a: 1, b: 2 };
